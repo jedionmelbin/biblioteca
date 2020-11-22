@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "biblioteca"
+  "defaultProject": "biblioteca",
+  "cli": {
+    "analytics": "e7b78b8e-222c-41a5-9dd5-1b91354a2853"
+  }
 }
