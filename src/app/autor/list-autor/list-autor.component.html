@@ -10,29 +10,19 @@
       <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Nacionalidad</th>
+        <th scope="col">Genero</th>
+        <th scope="col">F. Nacimiento</th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let autor of autores">
+        <th scope="row">{{autor.nombres}}</th>
+        <td>{{autor.apellidos}}</td>
+        <td>{{autor.nacionalidad}}</td>
+        <td>{{autor.genero}}</td>
+        <td>{{autor.fechaNacimiento}}</td>
       </tr>
       </tbody>
     </table>

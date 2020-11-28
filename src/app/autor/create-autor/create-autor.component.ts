@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AutorService} from '../services/autor.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-autor',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAutorComponent implements OnInit {
 
-  constructor() { }
+  addForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder, private router: Router, private autorService: AutorService) {
+  }
 
   ngOnInit(): void {
+    this.addForm = this.formBuilder.group({
+      autorId: [],
+      nombres: ['', Validators.required],
+      apellidos: ['', Validators.required],
+      genero: ['', Validators.required],
+      nacionalidad: ['', Validators.required],
+      fechaNacimiento: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    this.autorService.addAutor(this.addForm.value)
+      .subscribe(data => {
+        this.router.navigate(['autor']);
+      });
   }
 
 }
