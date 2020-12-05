@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ContactsComponent} from './contacts/contacts.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DisposicionComponent } from './disposicion/disposicion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    DisposicionComponent
   ],
   imports: [
     BrowserModule,

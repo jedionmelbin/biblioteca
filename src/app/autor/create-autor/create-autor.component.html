@@ -4,33 +4,47 @@
       <div class="card-body">
         <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
           <input type="hidden" formControlName="autorId" name="autorId" id="autorId">
-          <div class="form-row">
+          <h5>Crear autor:</h5>
             <div class="form-group col-md-6">
-              <label for="nombres">Nombres</label>
+              <label for="nombres">Nombres:</label>
               <input type="text" class="form-control" formControlName="nombres" name="nombres" id="nombres">
             </div>
             <div class="form-group col-md-6">
-              <label for="apellidos">Apellidos</label>
+              <label for="apellidos">Apellidos:</label>
               <input type="text" class="form-control" formControlName="apellidos" name="apellidos" id="apellidos">
             </div>
-          </div>
-          <div class="form-row">
+
+
             <div class="form-group col-md-6">
-              <label for="nacionalidad">Nacionalidad</label>
+              <label for="nacionalidad">Nacionalidad:</label>
               <input type="text" class="form-control" formControlName="nacionalidad" id="nacionalidad">
             </div>
             <div class="form-group col-md-6">
-              <label for="genero">Genero</label>
+              <label for="genero">Genero:</label>
               <input type="text" class="form-control" formControlName="genero" id="genero" name="genero">
             </div>
-          </div>
-          <div class="form-row">
+
+
             <div class="form-group col-md-6">
-              <label for="fechaNacimiento">Fecha Nacimiento</label>
+              <label for="fechaNacimiento">Fecha Nacimiento:</label>
               <input type="text" class="form-control" formControlName="fechaNacimiento" id="fechaNacimiento">
             </div>
+
+          <div class="form-group col-md-6">
+            <label for="fechaNacimiento">Teléfono:</label>
+            <input type="text" class="form-control" formControlName="fechaNacimiento" id="fechaNacimiento">
           </div>
-          <button type="submit" class="btn btn-primary">Create</button>
+
+          <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group" class = "mx-5" role="group">
+              <button type="submit" class="btn btn-primary">Crear Autor</button>
+            </div>
+            <div class="btn-group" class = "mx-5" role="group">
+              <button type="submit" class="btn btn-primary">Cancelar</button>
+            </div>
+          </div>
+
+
         </form>
       </div>
     </div>

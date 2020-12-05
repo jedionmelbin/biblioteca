@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {ContactsComponent} from './contacts/contacts.component';
+import {DisposicionComponent} from './disposicion/disposicion.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactsComponent
+  },
+  {
+    path: 'disposicion',
+    component: DisposicionComponent
   },
   {
     path: 'users',
