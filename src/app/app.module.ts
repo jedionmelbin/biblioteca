@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {ChartModule} from 'angular-highcharts';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './layout/header/header.component';
@@ -29,8 +28,7 @@ import {ReservaModule} from './reserva/reserva.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReservaModule,
-    ChartModule
+    ReservaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
