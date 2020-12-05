@@ -22,7 +22,8 @@ export class CreateAutorComponent implements OnInit {
       apellidos: ['', Validators.required],
       genero: ['', Validators.required],
       nacionalidad: ['', Validators.required],
-      fechaNacimiento: ['', Validators.required]
+      fechaNacimiento: ['', Validators.required],
+      telefono: []
     });
   }
 
@@ -32,5 +33,6 @@ export class CreateAutorComponent implements OnInit {
         this.router.navigate(['autor']);
       });
   }
+
 
 }

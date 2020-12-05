@@ -19,7 +19,6 @@ export class ListAutorComponent implements OnInit {
   getAutors() {
     this.autorService.getAutors().subscribe((response) => {
        this.autores = response;
-      //console.log(JSON.stringify(response['data']));
     }, err => {
       console.log(<any>err);
     });

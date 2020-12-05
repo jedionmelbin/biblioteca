@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-libro',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateLibroComponent implements OnInit {
 
-  constructor() { }
+  addForm: FormGroup;
 
-  ngOnInit(): void {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
   }
 
+  ngOnInit(): void {
+    this.addForm = this.formBuilder.group({
+      libroId: [],
+      titulo: ['', Validators.required],
+      autor: [],
+      fechaEmision: [],
+      paginas: [],
+      presentacion: []
+
+    });
+  }
+
+  fnReturn(): void {
+    this.router.navigate(['libro']);
+  }
+
+  onSubmit(): void {
+
+  }
 }

@@ -1,14 +1,13 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Autor} from '../model/autor';
 import {AppSettings} from '../../common/AppSettings';
-
+import {Observable} from 'rxjs';
+import {Libro} from '../model/Libro';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AutorService {
+export class LibroService {
 
   public url: string;
 
@@ -17,16 +16,16 @@ export class AutorService {
     this.url = AppSettings.API_ENDPOINT;
   }
 
-  getAutors(): Observable<any> {
-    return this.httpclient.get(this.url + 'autores/listaAutor');
+  getLibro(): Observable<any> {
+    return this.httpclient.get(this.url + 'libros/listaLibro');
   }
 
-  addAutor(data: Autor): Observable<any> {
+  addLibro(data: Libro): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    return this.httpclient.post<Autor>(AppSettings.API_ENDPOINT + 'autores/create', data, httpOptions);
+    return this.httpclient.post<Libro>(AppSettings.API_ENDPOINT + 'libros/create', data);
   }
 }

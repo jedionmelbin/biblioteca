@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {ChartModule} from 'angular-highcharts';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './layout/header/header.component';
@@ -10,7 +11,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {ContactsComponent} from './contacts/contacts.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { DisposicionComponent } from './disposicion/disposicion.component';
+import {DisposicionComponent} from './disposicion/disposicion.component';
+import {ReservaModule} from './reserva/reserva.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DisposicionComponent } from './disposicion/disposicion.component';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReservaModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

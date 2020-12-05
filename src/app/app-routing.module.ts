@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'autor',
     loadChildren: () => import('./autor/autor.module').then(m => m.AutorModule)
+  },
+  {
+    path: 'reserva',
+    loadChildren: () => import('./reserva/reserva.module').then(m => m.ReservaModule)
   }
 
 ];
