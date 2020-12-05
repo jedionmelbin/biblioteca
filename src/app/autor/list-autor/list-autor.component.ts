@@ -10,24 +10,22 @@ import {Router} from '@angular/router';
 })
 export class ListAutorComponent implements OnInit {
 
-  autores: Autor[] ;
+  autores: Autor[];
 
   constructor(private router: Router, private autorService: AutorService) {
 
   }
 
   getAutors() {
-    console.log('execute service');
-    this.autorService.getAutors().subscribe(data => {
-      this.autores = data;
+    this.autorService.getAutors().subscribe((response) => {
+       this.autores = response;
+      //console.log(JSON.stringify(response['data']));
+    }, err => {
+      console.log(<any>err);
     });
   }
 
   ngOnInit(): void {
-    console.log('execute init');
-  /*  this.router.events.subscribe(value => {
-
-    });*/
     this.getAutors();
   }
 

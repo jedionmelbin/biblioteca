@@ -6,7 +6,6 @@ import { CreateAutorComponent } from './create-autor/create-autor.component';
 import { ListAutorComponent } from './list-autor/list-autor.component';
 import {ReactiveFormsModule} from '@angular/forms';
 
-
 @NgModule({
   declarations: [CreateAutorComponent, ListAutorComponent],
     imports: [
@@ -16,3 +15,4 @@ import {ReactiveFormsModule} from '@angular/forms';
     ]
 })
 export class AutorModule { }
+
